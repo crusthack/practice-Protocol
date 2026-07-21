@@ -1,0 +1,4 @@
+/home/hack/Desktop/practice-Network/build/debug/CMakeFiles/rawsock.dir
+/home/hack/Desktop/practice-Network/build/debug/CMakeFiles/rawsock_app.dir
+/home/hack/Desktop/practice-Network/build/debug/CMakeFiles/edit_cache.dir
+/home/hack/Desktop/practice-Network/build/debug/CMakeFiles/rebuild_cache.dir

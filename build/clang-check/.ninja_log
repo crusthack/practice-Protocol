@@ -1,0 +1,14 @@
+# ninja log v5
+0	20	1784618850971603252	CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o	dfc734f4107fbdc8
+0	20	1784618850971603252	CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o	d358aa00ba4bf0a1
+0	28	1784618850981603605	CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o	808024766bda4131
+0	24	1784618861656979911	CMakeFiles/rawsock_app.dir/app/main.cpp.o	799bd733372067ae
+0	102	1784618861733982621	CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o	a80702a945c4e975
+102	126	1784618861753319220	librawsock.a	364712d45685e1
+126	169	1784618861802542902	rawsock_app	40627c846c1495c0
+0	98	1784618878529572184	CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o	a80702a945c4e975
+98	122	1784618878549164253	librawsock.a	364712d45685e1
+122	161	1784618878594327059	rawsock_app	40627c846c1495c0
+1	90	1784618930139365875	CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o	a80702a945c4e975
+90	108	1784618930155064322	librawsock.a	364712d45685e1
+108	144	1784618930195420337	rawsock_app	40627c846c1495c0
