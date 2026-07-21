@@ -1,0 +1,3 @@
+/home/hack/Desktop/protocol/tcp/build/CMakeFiles/tcp.dir
+/home/hack/Desktop/protocol/tcp/build/CMakeFiles/edit_cache.dir
+/home/hack/Desktop/protocol/tcp/build/CMakeFiles/rebuild_cache.dir
