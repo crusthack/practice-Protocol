@@ -34,3 +34,12 @@ target_link_libraries(rawsock_app
     PRIVATE
         rawsock
 )
+
+add_executable(ping
+    examples/ping.cpp
+)
+
+target_link_libraries(ping
+    PRIVATE
+        rawsock
+)

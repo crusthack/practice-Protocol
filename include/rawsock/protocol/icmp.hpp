@@ -1,5 +1,8 @@
 #pragma once 
+
+#include <rawsock/rawsocketcore.hpp>
 #include <rawsock/protocol/inet.hpp>
+
 // 4 byte
 struct IcmpHeader
 {

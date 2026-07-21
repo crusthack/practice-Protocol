@@ -1,4 +1,5 @@
 /home/hack/Desktop/practice-Network/build/CMakeFiles/rawsock.dir
 /home/hack/Desktop/practice-Network/build/CMakeFiles/rawsock_app.dir
+/home/hack/Desktop/practice-Network/build/CMakeFiles/ping.dir
 /home/hack/Desktop/practice-Network/build/CMakeFiles/edit_cache.dir
 /home/hack/Desktop/practice-Network/build/CMakeFiles/rebuild_cache.dir
