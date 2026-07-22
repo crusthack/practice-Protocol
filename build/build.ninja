@@ -51,6 +51,27 @@ build CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o: CXX_COMPILER__raws
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
 
+build CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/protocol/icmp.cpp || cmake_object_order_depends_target_rawsock
+  DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o.d
+  FLAGS = -std=c++20
+  INCLUDES = -I/home/hack/Desktop/practice-Network/include
+  OBJECT_DIR = CMakeFiles/rawsock.dir
+  OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
+
+build CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/protocol/udp.cpp || cmake_object_order_depends_target_rawsock
+  DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o.d
+  FLAGS = -std=c++20
+  INCLUDES = -I/home/hack/Desktop/practice-Network/include
+  OBJECT_DIR = CMakeFiles/rawsock.dir
+  OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
+
+build CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/protocol/tcp.cpp || cmake_object_order_depends_target_rawsock
+  DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o.d
+  FLAGS = -std=c++20
+  INCLUDES = -I/home/hack/Desktop/practice-Network/include
+  OBJECT_DIR = CMakeFiles/rawsock.dir
+  OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
+
 build CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/rawsocketcore.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o.d
   FLAGS = -std=c++20
@@ -80,7 +101,7 @@ build CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o: CXX_COMPILER__r
 #############################################
 # Link the static library librawsock.a
 
-build librawsock.a: CXX_STATIC_LIBRARY_LINKER__rawsock_ CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o
+build librawsock.a: CXX_STATIC_LIBRARY_LINKER__rawsock_ CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o
   OBJECT_DIR = CMakeFiles/rawsock.dir
   POST_BUILD = :
   PRE_LINK = :

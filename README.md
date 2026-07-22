@@ -12,12 +12,11 @@
 
 # Project Environment Setup
 ## Virtual Environment 
-- Windows Hyper-V
-- Requirement: Fast, Share Clipboard Well 
-- 동작 빨라야함, 클립보드 공유 잘 돼야 됨. 
+- Windows Hyper-V. Ubuntu 24
 
 ## Install Project Tool
-- using [vs code](https://code.visualstudio.com/)
+- Use VS Code for text edit
+- [VS Code Download Link](https://code.visualstudio.com/)
 ```
 sudo apt install clang llvm lld lldb clangd clang-format clang-tidy cmake ninja-build
 ```
@@ -45,6 +44,10 @@ ninja -C build
 - traceroute
 - udp p2p chatting 
 - tcp chatting 
+
+## expand
+- iovec msghdr 사용해볼것. scatter i/o. recvmsg()
+
 
 # Test 
 - Wireshark packet capture 

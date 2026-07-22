@@ -1,161 +1,57 @@
 #include "rawsock/protocol/inet.hpp"
-#include "rawsock/protocol/icmp.hpp"
-#include "rawsock/socket/icmpsocket.hpp"
+#include "rawsock/rawsocketcore.hpp"
 #include <arpa/inet.h>
 #include <cstdio>
 #include <netinet/in.h>
 #include <sys/socket.h>
-#include <algorithm>
 
 void InetHeader::CalcInetHeaderChecksum(const char* buffer, int len)
 {
     auto p = (InetHeader*)buffer;
     p->HeaderChecksum = 0;
-    p->HeaderChecksum = htons(CalcChecksum(buffer, len));
+    p->HeaderChecksum = htons(CalcChecksumCommon(buffer, len));
 }
 
-IcmpSocket::IcmpSocket()
+void InetHeader::CheckHeaderSize()
 {
-    IcmpHeader::CheckHeaderSize();
-    InetHeader::CheckHeaderSize();
-
-    _Socket = socket(AF_INET, SOCK_RAW, IPPROTO_ICMP);
-    if(_Socket == -1)
-    {
-        perror("Icmp Socket constructor. init socket failed\n");
-    }
-
-    int one = 1;
-    if(setsockopt(_Socket, IPPROTO_IP, IP_HDRINCL, &one, sizeof(one))
-        == -1)
-    {
-        perror("Icmp Socket constructor. set socket opt failed\n");
-    }
+    static_assert(sizeof(InetHeader) == 20, "IPv4 Header size is not 20");
 }
 
-void IcmpSocket::SendPingRequestMessage(const char* dstIp)
+void InetHeader::BuildInetHeader(char *buffer, unsigned short totalLength, unsigned short id, unsigned char ipProto, const char *srcIp, const char *dstIp)
 {
-    int payloadSize = 20;
-    int bufferSize = payloadSize + sizeof(InetHeader) + sizeof(IcmpHeader);
-    char* buffer = new char[bufferSize];
-    BuildPingRequestMessage(buffer, bufferSize, "127.0.0.1", dstIp);
+    auto p = (InetHeader*) buffer;
+    p->VersionAndHeaderLength = (4 << 4) | sizeof(InetHeader) / 4;
+    p->TypeOfService = 0;
+    p->TotalLength = htons(totalLength);
 
+    p->Identification = htons(id);
+    p->FlagsAndFragmentOffset = htons(0);
 
-    sockaddr_in addr {};
-    addr.sin_family = AF_INET;
-    inet_pton(AF_INET, dstIp, &addr.sin_addr);
+    p->TimeToLive = 64;
+    p->Protocol = ipProto;
+    p->HeaderChecksum = htons(0);
     
-    sendto(_Socket, buffer, bufferSize, 0, (sockaddr*)&addr, sizeof(addr));
+    inet_pton(AF_INET, srcIp, &p->SourceAddress);
+    inet_pton(AF_INET, dstIp, &p->DestinationAddress);
 
-    return;
+    CalcInetHeaderChecksum(buffer, sizeof(InetHeader));
 }
 
-void IcmpSocket::BuildPingRequestMessage(const char* buffer, int len, const char* srcIp, const char* dstIp)
+bool InetHeader::IsValidInetHeader(int totalLen)
 {
-    // ip header -> icmp header -> icmp message -> icmp checksum
+    auto ipver = VersionAndHeaderLength >> 4;
+    auto ihl = (VersionAndHeaderLength & 0x0f) * 4;
+    auto total = ntohs(TotalLength);
+    auto p = this;
+    CalcInetHeaderChecksum((char*)p, sizeof(InetHeader));
+
+    bool isValid =
+        ipver == 4 &&
+        ihl >= sizeof(InetHeader) &&
+        total == totalLen &&
+        // if checksum is valid, this will be 0
+        CalcChecksumCommon((const char*)this, sizeof(InetHeader)) == 0 &&
+        TimeToLive > 0;
     
-    if(len < (int)(sizeof(InetHeader) + sizeof(IcmpHeader) + 1))
-    {
-        return;
-    }
-
-    // prepare src ip
-    char _srcIp[16];
-    if(srcIp == nullptr)
-    {
-        GetLocalhostIp(_srcIp, 16);
-    }
-    else
-    {
-        std::copy(srcIp, srcIp + 16, _srcIp);
-    }
-
-    auto ipHeaderp = (char*)buffer;
-    auto icmpHeaderP = (char*)buffer + sizeof(InetHeader);
-    auto payloadP = (char*) (buffer + sizeof(InetHeader) + sizeof(IcmpHeader));
-    int payloadLen = len - sizeof(InetHeader) - sizeof(IcmpHeader);
-
-    InetHeader::BuildInetHeader(ipHeaderp, len, 1, IPPROTO_ICMP, _srcIp, dstIp);
-    IcmpHeader::BuildIcmpHeader(icmpHeaderP, 8, 0);
-    // make payload. ascii stream
-    for(int i=0; i<payloadLen; ++i)
-    {
-        payloadP[i] = ('A' + i) % 128;
-    }
-    IcmpHeader::CalcIcmpHeaderChecksum(icmpHeaderP, sizeof(IcmpHeader) + payloadLen);
-}
-
-// maybe, make rawsock class than move to static method. tcpsock icmpsock inherit rawsock
-int IcmpSocket::GetLocalhostIp(char* buffer, int len)
-{
-    if(len < 16)
-    {
-        return -1;
-    }
-    int s = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
-    sockaddr_in addr {};
-    addr.sin_family = AF_INET;
-    addr.sin_port = htons(44);
-    inet_pton(AF_INET, "8.8.8.8", (sockaddr_in*)&addr.sin_addr);
-    if(connect(s, (sockaddr*)&addr, sizeof(addr)) == -1)
-    {
-        return -1;
-    }
-
-    sockaddr_in local {};
-    socklen_t l = sizeof(local);
-    getsockname(s, (sockaddr*)&local, &l);
-    inet_ntop(AF_INET, (sockaddr*)&local.sin_addr, buffer, l);
-
-    return 0;
-}
-
-unsigned short CalcChecksum(const unsigned char* buffer, int len)
-{
-    unsigned int sum = 0;
-    while(len >= 2)
-    {
-        const unsigned short word = (buffer[0] << 8) | buffer[1];
-        sum += word;
-        len -= 2;
-        buffer += 2;
-    }
-    // if len is odd
-    if(len == 1)
-    {
-        sum += buffer[0] << 8;
-    }
- 
- 
-    while((sum >> 16) != 0)
-    {
-        sum = (sum & 0xFFFFu) + (sum >> 16);
-    }
- 
-    return ~sum;
-}
-
-unsigned short CalcChecksum(const char* buf, int len)
-{
-    auto buffer = (unsigned char*)buf;
-    unsigned int sum = 0;
-    while(len >= 2)
-    {
-        const unsigned short word = (buffer[0] << 8) | buffer[1];
-        sum += word;
-        len -= 2;
-        buffer += 2;
-    }
-    // if len is odd
-    if(len == 1)
-    {
-        sum += buffer[0] << 8;
-    }
- 
-    while((sum >> 16) != 0)
-    {
-        sum = (sum & 0xFFFFu) + (sum >> 16);
-    }
- 
-    return ~sum;
-}
+    return isValid;
+}; 

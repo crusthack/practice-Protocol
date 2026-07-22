@@ -11,9 +11,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_library(rawsock
     src/rawsock/protocol/inet.cpp
-    # src/rawsock/protocol/icmp.cpp
-    # src/rawsock/protocol/udp.cpp
-    # src/protocol/tcp.cpp
+    src/rawsock/protocol/icmp.cpp
+    src/rawsock/protocol/udp.cpp
+    src/rawsock/protocol/tcp.cpp
 
     src/rawsock/rawsocketcore.cpp
     src/rawsock/socket/icmpsocket.cpp

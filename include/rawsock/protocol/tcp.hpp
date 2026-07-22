@@ -17,8 +17,5 @@ struct TcpHeader
     unsigned short Pointer;
     // options, padding... 
 
-    static void CheckHeaderSize()
-    {
-        static_assert(sizeof(TcpHeader) == 20, "Tcp Header size is not 20");
-    }
+    static void CheckHeaderSize();
 };

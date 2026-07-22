@@ -5,7 +5,7 @@
 #include <rawsock/rawsocketcore.hpp>
 
 
-unsigned short CalcChecksum(const char* buffer, int len);
+unsigned short CalcChecksumCommon(const char* buffer, int len);
 // IPv4 Header. should be 20 byte
 struct InetHeader
 {
@@ -18,39 +18,19 @@ struct InetHeader
 
     Byte TimeToLive;                // default 64
     Byte Protocol;
-    Word HeaderChecksum;
+    Word HeaderChecksum;            // calc only IP Header, exclude payload
 
     DoubleWord SourceAddress;
 
     DoubleWord DestinationAddress;
     // options, padding... 
 
-    static void CheckHeaderSize()
-    {
-        static_assert(sizeof(InetHeader) == 20, "IPv4 Header size is not 20");
-    }
+    static void CheckHeaderSize();
 
-    static void BuildInetHeader(char* buffer, unsigned short totalLength, Word id, Byte ipProto,
-        const char* srcIp, const char* dstIp)
-    {
-
-        auto p = (InetHeader*) buffer;
-        p->VersionAndHeaderLength = (4 << 4) | sizeof(InetHeader) / 4;
-        p->TypeOfService = 0;
-        p->TotalLength = htons(totalLength);
-
-        p->Identification = htons(id);
-        p->FlagsAndFragmentOffset = htons(0);
-
-        p->TimeToLive = 64;
-        p->Protocol = ipProto;
-        p->HeaderChecksum = htons(0);
-        
-        inet_pton(AF_INET, srcIp, &p->SourceAddress);
-        inet_pton(AF_INET, dstIp, &p->DestinationAddress);
-
-        CalcInetHeaderChecksum(buffer, sizeof(InetHeader));
-    }
+    static void BuildInetHeader(char* buffer, unsigned short totalLength, 
+        Word id, Byte ipProto, const char* srcIp, const char* dstIp);
 
     static void CalcInetHeaderChecksum(const char* buffer, int len);
+
+    bool IsValidInetHeader(int totalLen);
 };

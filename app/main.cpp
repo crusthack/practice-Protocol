@@ -5,7 +5,7 @@
 int main()
 {
     IcmpSocket sock {};
-    sock.SendPingRequestMessage();
+    sock.SendPingMessage();
 
     return 0;
 }

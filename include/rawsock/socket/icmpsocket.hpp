@@ -13,14 +13,16 @@ public:
     IcmpSocket& operator=(const IcmpSocket&) noexcept = default;
     IcmpSocket& operator=(IcmpSocket&&) noexcept = default;
 
-    void SendPingRequestMessage(const char* dstIp = "127.0.0.1");
+    void SendPingMessage(const char* dstIp = "127.0.0.1", const short id = 5, const short sequenceNum = 1);
 
-    void RecvIcmpReplyMessage(const int count);
-    void RecvIcmpMessage(const int count, const int type = -1);
+    // recv icmp echo reply include ipv4 header;
+    int RecvIcmpEchoReplyMessage(const char* buffer, const int len, const short id, const short sequenceNum);
+    // recv icmp packet include ipv4 header
+    int RecvIcmpMessage(const char* buffer, const int len);
 
-    void BuildPingRequestMessage(const char* buffer, int len, const char* srcIp = nullptr, const char* dstIp = "127.0.0.1");
+    void BuildPingRequestMessage(const char* buffer, int len, const char* srcIp = nullptr, const char* dstIp = "127.0.0.1",
+        const short id = 1, const short sequenceNum = 1);
 
-    int GetLocalhostIp(char* buffer, int len);
     
 private:
     int _Socket;

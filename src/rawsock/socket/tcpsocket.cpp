@@ -1,5 +1,6 @@
 #include "rawsock/socket/tcpsocket.hpp"
 #include "rawsock/protocol/inet.hpp"
+#include "rawsock/protocol/tcp.hpp"
 #include <cassert>
 #include <netinet/in.h>
 #include <sys/socket.h>
