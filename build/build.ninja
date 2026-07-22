@@ -46,49 +46,56 @@ build cmake_object_order_depends_target_rawsock: phony || CMakeFiles/rawsock.dir
 
 build CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/protocol/inet.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o.d
-  FLAGS = -std=c++20
+  FLAGS = -std=c++23 -stdlib=libc++
   INCLUDES = -I/home/hack/Desktop/practice-Network/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
 
 build CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/protocol/icmp.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o.d
-  FLAGS = -std=c++20
+  FLAGS = -std=c++23 -stdlib=libc++
   INCLUDES = -I/home/hack/Desktop/practice-Network/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
 
 build CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/protocol/udp.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o.d
-  FLAGS = -std=c++20
+  FLAGS = -std=c++23 -stdlib=libc++
   INCLUDES = -I/home/hack/Desktop/practice-Network/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
 
 build CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/protocol/tcp.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o.d
-  FLAGS = -std=c++20
+  FLAGS = -std=c++23 -stdlib=libc++
   INCLUDES = -I/home/hack/Desktop/practice-Network/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
 
 build CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/rawsocketcore.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o.d
-  FLAGS = -std=c++20
+  FLAGS = -std=c++23 -stdlib=libc++
   INCLUDES = -I/home/hack/Desktop/practice-Network/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock
 
 build CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/socket/icmpsocket.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o.d
-  FLAGS = -std=c++20
+  FLAGS = -std=c++23 -stdlib=libc++
+  INCLUDES = -I/home/hack/Desktop/practice-Network/include
+  OBJECT_DIR = CMakeFiles/rawsock.dir
+  OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/socket
+
+build CMakeFiles/rawsock.dir/src/rawsock/socket/udpsocket.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/socket/udpsocket.cpp || cmake_object_order_depends_target_rawsock
+  DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/socket/udpsocket.cpp.o.d
+  FLAGS = -std=c++23 -stdlib=libc++
   INCLUDES = -I/home/hack/Desktop/practice-Network/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/socket
 
 build CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o: CXX_COMPILER__rawsock_unscanned_ /home/hack/Desktop/practice-Network/src/rawsock/socket/tcpsocket.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o.d
-  FLAGS = -std=c++20
+  FLAGS = -std=c++23 -stdlib=libc++
   INCLUDES = -I/home/hack/Desktop/practice-Network/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/socket
@@ -101,7 +108,7 @@ build CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o: CXX_COMPILER__r
 #############################################
 # Link the static library librawsock.a
 
-build librawsock.a: CXX_STATIC_LIBRARY_LINKER__rawsock_ CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o
+build librawsock.a: CXX_STATIC_LIBRARY_LINKER__rawsock_ CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o CMakeFiles/rawsock.dir/src/rawsock/socket/udpsocket.cpp.o CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o
   OBJECT_DIR = CMakeFiles/rawsock.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -119,7 +126,7 @@ build cmake_object_order_depends_target_rawsock_app: phony || cmake_object_order
 
 build CMakeFiles/rawsock_app.dir/app/main.cpp.o: CXX_COMPILER__rawsock_app_unscanned_ /home/hack/Desktop/practice-Network/app/main.cpp || cmake_object_order_depends_target_rawsock_app
   DEP_FILE = CMakeFiles/rawsock_app.dir/app/main.cpp.o.d
-  FLAGS = -std=c++20
+  FLAGS = -std=c++23 -stdlib=libc++
   INCLUDES = -I/home/hack/Desktop/practice-Network/include
   OBJECT_DIR = CMakeFiles/rawsock_app.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock_app.dir/app
@@ -133,6 +140,7 @@ build CMakeFiles/rawsock_app.dir/app/main.cpp.o: CXX_COMPILER__rawsock_app_unsca
 # Link the executable rawsock_app
 
 build rawsock_app: CXX_EXECUTABLE_LINKER__rawsock_app_ CMakeFiles/rawsock_app.dir/app/main.cpp.o | librawsock.a || librawsock.a
+  LINK_FLAGS = -stdlib=libc++
   LINK_LIBRARIES = librawsock.a
   OBJECT_DIR = CMakeFiles/rawsock_app.dir
   POST_BUILD = :
@@ -151,7 +159,7 @@ build cmake_object_order_depends_target_ping: phony || cmake_object_order_depend
 
 build CMakeFiles/ping.dir/examples/ping.cpp.o: CXX_COMPILER__ping_unscanned_ /home/hack/Desktop/practice-Network/examples/ping.cpp || cmake_object_order_depends_target_ping
   DEP_FILE = CMakeFiles/ping.dir/examples/ping.cpp.o.d
-  FLAGS = -std=c++20
+  FLAGS = -std=c++23 -stdlib=libc++
   INCLUDES = -I/home/hack/Desktop/practice-Network/include
   OBJECT_DIR = CMakeFiles/ping.dir
   OBJECT_FILE_DIR = CMakeFiles/ping.dir/examples
@@ -165,12 +173,46 @@ build CMakeFiles/ping.dir/examples/ping.cpp.o: CXX_COMPILER__ping_unscanned_ /ho
 # Link the executable ping
 
 build ping: CXX_EXECUTABLE_LINKER__ping_ CMakeFiles/ping.dir/examples/ping.cpp.o | librawsock.a || librawsock.a
+  LINK_FLAGS = -stdlib=libc++
   LINK_LIBRARIES = librawsock.a
   OBJECT_DIR = CMakeFiles/ping.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = ping
   TARGET_PDB = ping.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target traceroute
+
+
+#############################################
+# Order-only phony target for traceroute
+
+build cmake_object_order_depends_target_traceroute: phony || cmake_object_order_depends_target_rawsock
+
+build CMakeFiles/traceroute.dir/examples/traceroute.cpp.o: CXX_COMPILER__traceroute_unscanned_ /home/hack/Desktop/practice-Network/examples/traceroute.cpp || cmake_object_order_depends_target_traceroute
+  DEP_FILE = CMakeFiles/traceroute.dir/examples/traceroute.cpp.o.d
+  FLAGS = -std=c++23 -stdlib=libc++
+  INCLUDES = -I/home/hack/Desktop/practice-Network/include
+  OBJECT_DIR = CMakeFiles/traceroute.dir
+  OBJECT_FILE_DIR = CMakeFiles/traceroute.dir/examples
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target traceroute
+
+
+#############################################
+# Link the executable traceroute
+
+build traceroute: CXX_EXECUTABLE_LINKER__traceroute_ CMakeFiles/traceroute.dir/examples/traceroute.cpp.o | librawsock.a || librawsock.a
+  LINK_FLAGS = -stdlib=libc++
+  LINK_LIBRARIES = librawsock.a
+  OBJECT_DIR = CMakeFiles/traceroute.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = traceroute
+  TARGET_PDB = traceroute.dbg
 
 
 #############################################
@@ -208,7 +250,7 @@ build rawsock: phony librawsock.a
 #############################################
 # Folder: /home/hack/Desktop/practice-Network/build
 
-build all: phony librawsock.a rawsock_app ping
+build all: phony librawsock.a rawsock_app ping traceroute
 
 # =============================================================================
 # Built-in targets
@@ -217,14 +259,14 @@ build all: phony librawsock.a rawsock_app ping
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/hack/Desktop/practice-Network/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/hack/Desktop/practice-Network/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/hack/Desktop/practice-Network/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
+build /home/hack/Desktop/practice-Network/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
 
 
 #############################################

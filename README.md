@@ -54,3 +54,7 @@ ninja -C build
 - Console program functional test 
 - Local Communication with Common Socket (Native Ubuntu env)
 - Windows - Linux (Lan env, same wifi)
+
+# raw socket 권한 부여
+- `sudo setcap cap_net_raw=eip build/clang/ping`
+- 아니면 매번 sudo 붙여서 프로그램 실행

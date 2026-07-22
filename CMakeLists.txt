@@ -5,9 +5,21 @@ project(rawsock
     LANGUAGES CXX
 )
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    add_compile_options(
+        $<$<COMPILE_LANGUAGE:CXX>:-stdlib=libc++>
+    )
+
+    add_link_options(
+        -stdlib=libc++
+    )
+endif()
 
 add_library(rawsock
     src/rawsock/protocol/inet.cpp
@@ -17,7 +29,7 @@ add_library(rawsock
 
     src/rawsock/rawsocketcore.cpp
     src/rawsock/socket/icmpsocket.cpp
-    # src/socket/udpsocket.cpp
+    src/rawsock/socket/udpsocket.cpp
     src/rawsock/socket/tcpsocket.cpp
 )
 
@@ -40,6 +52,15 @@ add_executable(ping
 )
 
 target_link_libraries(ping
+    PRIVATE
+        rawsock
+)
+
+add_executable(traceroute
+    examples/traceroute.cpp
+)
+
+target_link_libraries(traceroute
     PRIVATE
         rawsock
 )

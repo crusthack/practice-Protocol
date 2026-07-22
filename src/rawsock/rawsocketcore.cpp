@@ -51,7 +51,7 @@ int GetHostIp(char* const srcip, const char* const dstip)
 {
     sockaddr_in addr {};
     GetHostIp(&addr, dstip);
-    inet_ntop(AF_INET, &addr.sin_addr, srcip, sizeof(sockaddr_in));
+    inet_ntop(AF_INET, &addr.sin_addr, srcip, INET_ADDRSTRLEN);
     
     return 0;
 }

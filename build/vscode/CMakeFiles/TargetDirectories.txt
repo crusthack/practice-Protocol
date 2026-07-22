@@ -1,0 +1,6 @@
+/home/hack/Desktop/protocol/build/vscode/CMakeFiles/rawsock.dir
+/home/hack/Desktop/protocol/build/vscode/CMakeFiles/rawsock_app.dir
+/home/hack/Desktop/protocol/build/vscode/CMakeFiles/ping.dir
+/home/hack/Desktop/protocol/build/vscode/CMakeFiles/traceroute.dir
+/home/hack/Desktop/protocol/build/vscode/CMakeFiles/edit_cache.dir
+/home/hack/Desktop/protocol/build/vscode/CMakeFiles/rebuild_cache.dir

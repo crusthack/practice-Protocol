@@ -1,0 +1,68 @@
+[
+{
+  "directory": "/home/hack/Desktop/protocol/build/vscode",
+  "command": "/usr/bin/c++ -I/home/hack/Desktop/protocol/include -g -std=c++23 -o CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o -c /home/hack/Desktop/protocol/src/rawsock/protocol/inet.cpp",
+  "file": "/home/hack/Desktop/protocol/src/rawsock/protocol/inet.cpp",
+  "output": "CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o"
+},
+{
+  "directory": "/home/hack/Desktop/protocol/build/vscode",
+  "command": "/usr/bin/c++ -I/home/hack/Desktop/protocol/include -g -std=c++23 -o CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o -c /home/hack/Desktop/protocol/src/rawsock/protocol/icmp.cpp",
+  "file": "/home/hack/Desktop/protocol/src/rawsock/protocol/icmp.cpp",
+  "output": "CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o"
+},
+{
+  "directory": "/home/hack/Desktop/protocol/build/vscode",
+  "command": "/usr/bin/c++ -I/home/hack/Desktop/protocol/include -g -std=c++23 -o CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o -c /home/hack/Desktop/protocol/src/rawsock/protocol/udp.cpp",
+  "file": "/home/hack/Desktop/protocol/src/rawsock/protocol/udp.cpp",
+  "output": "CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o"
+},
+{
+  "directory": "/home/hack/Desktop/protocol/build/vscode",
+  "command": "/usr/bin/c++ -I/home/hack/Desktop/protocol/include -g -std=c++23 -o CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o -c /home/hack/Desktop/protocol/src/rawsock/protocol/tcp.cpp",
+  "file": "/home/hack/Desktop/protocol/src/rawsock/protocol/tcp.cpp",
+  "output": "CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o"
+},
+{
+  "directory": "/home/hack/Desktop/protocol/build/vscode",
+  "command": "/usr/bin/c++ -I/home/hack/Desktop/protocol/include -g -std=c++23 -o CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o -c /home/hack/Desktop/protocol/src/rawsock/rawsocketcore.cpp",
+  "file": "/home/hack/Desktop/protocol/src/rawsock/rawsocketcore.cpp",
+  "output": "CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o"
+},
+{
+  "directory": "/home/hack/Desktop/protocol/build/vscode",
+  "command": "/usr/bin/c++ -I/home/hack/Desktop/protocol/include -g -std=c++23 -o CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o -c /home/hack/Desktop/protocol/src/rawsock/socket/icmpsocket.cpp",
+  "file": "/home/hack/Desktop/protocol/src/rawsock/socket/icmpsocket.cpp",
+  "output": "CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o"
+},
+{
+  "directory": "/home/hack/Desktop/protocol/build/vscode",
+  "command": "/usr/bin/c++ -I/home/hack/Desktop/protocol/include -g -std=c++23 -o CMakeFiles/rawsock.dir/src/rawsock/socket/udpsocket.cpp.o -c /home/hack/Desktop/protocol/src/rawsock/socket/udpsocket.cpp",
+  "file": "/home/hack/Desktop/protocol/src/rawsock/socket/udpsocket.cpp",
+  "output": "CMakeFiles/rawsock.dir/src/rawsock/socket/udpsocket.cpp.o"
+},
+{
+  "directory": "/home/hack/Desktop/protocol/build/vscode",
+  "command": "/usr/bin/c++ -I/home/hack/Desktop/protocol/include -g -std=c++23 -o CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o -c /home/hack/Desktop/protocol/src/rawsock/socket/tcpsocket.cpp",
+  "file": "/home/hack/Desktop/protocol/src/rawsock/socket/tcpsocket.cpp",
+  "output": "CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o"
+},
+{
+  "directory": "/home/hack/Desktop/protocol/build/vscode",
+  "command": "/usr/bin/c++ -I/home/hack/Desktop/protocol/include -g -std=c++23 -o CMakeFiles/rawsock_app.dir/app/main.cpp.o -c /home/hack/Desktop/protocol/app/main.cpp",
+  "file": "/home/hack/Desktop/protocol/app/main.cpp",
+  "output": "CMakeFiles/rawsock_app.dir/app/main.cpp.o"
+},
+{
+  "directory": "/home/hack/Desktop/protocol/build/vscode",
+  "command": "/usr/bin/c++ -I/home/hack/Desktop/protocol/include -g -std=c++23 -o CMakeFiles/ping.dir/examples/ping.cpp.o -c /home/hack/Desktop/protocol/examples/ping.cpp",
+  "file": "/home/hack/Desktop/protocol/examples/ping.cpp",
+  "output": "CMakeFiles/ping.dir/examples/ping.cpp.o"
+},
+{
+  "directory": "/home/hack/Desktop/protocol/build/vscode",
+  "command": "/usr/bin/c++ -I/home/hack/Desktop/protocol/include -g -std=c++23 -o CMakeFiles/traceroute.dir/examples/traceroute.cpp.o -c /home/hack/Desktop/protocol/examples/traceroute.cpp",
+  "file": "/home/hack/Desktop/protocol/examples/traceroute.cpp",
+  "output": "CMakeFiles/traceroute.dir/examples/traceroute.cpp.o"
+}
+]

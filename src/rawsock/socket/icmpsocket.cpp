@@ -66,7 +66,7 @@ void IcmpSocket::SendPingMessage(const char* dstIp, const short id, const short 
 
         auto icmpHeader = (const IcmpEchoHeader*)(recvBuffer + headerLen);
         char srcIp[16];
-        inet_ntop(AF_INET, &ipHeader->SourceAddress, srcIp, sizeof(srcIp));
+        inet_ntop(AF_INET, &ipHeader->SourceAddress, srcIp, INET_ADDRSTRLEN);
         printf("%d bytes from %s: icmp_seq=%d ttl=%d time=%.3f ms\n",
             retcode, srcIp, ntohs(icmpHeader->SequenceNum), ipHeader->TimeToLive,
             elapsedNs / 1'000'000.0);
@@ -90,7 +90,7 @@ void IcmpSocket::BuildPingRequestMessage(const char* buffer, int len, const char
     {
         sockaddr_in addr {};
         GetHostIp(&addr, dstIp);
-        inet_ntop(AF_INET, &addr.sin_addr, _srcIp, sizeof(sockaddr_in));
+        inet_ntop(AF_INET, &addr.sin_addr, _srcIp, INET_ADDRSTRLEN);
     }
     else
     {
