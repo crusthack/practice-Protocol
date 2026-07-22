@@ -2,6 +2,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <unistd.h>
 
 unsigned short CalcChecksumCommon(const char* buf, int len)
 {
@@ -29,26 +30,28 @@ unsigned short CalcChecksumCommon(const char* buf, int len)
 }
 
 // maybe, make rawsock class than move to static method. tcpsock icmpsock inherit rawsock
-int GetLocalhostIp(char* buffer, int len)
+int GetHostIp(sockaddr_in* addr, const char* dstip)
 {
-    if(len < 16)
-    {
-        return -1;
-    }
     int s = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
+    addr->sin_family = AF_INET;
+    addr->sin_port = htons(44);
+    inet_pton(AF_INET, dstip, &addr->sin_addr);
+    auto r = connect(s, (sockaddr*)addr, sizeof(sockaddr_in));
+
+    socklen_t l = sizeof(sockaddr_in);
+    getsockname(s, (sockaddr*)addr, &l);
+
+    close(s);
+    
+    return 0;
+}
+
+
+int GetHostIp(char* const srcip, const char* const dstip)
+{
     sockaddr_in addr {};
-    addr.sin_family = AF_INET;
-    addr.sin_port = htons(44);
-    inet_pton(AF_INET, "8.8.8.8", (sockaddr_in*)&addr.sin_addr);
-    if(connect(s, (sockaddr*)&addr, sizeof(addr)) == -1)
-    {
-        return -1;
-    }
-
-    sockaddr_in local {};
-    socklen_t l = sizeof(local);
-    getsockname(s, (sockaddr*)&local, &l);
-    inet_ntop(AF_INET, (sockaddr*)&local.sin_addr, buffer, l);
-
+    GetHostIp(&addr, dstip);
+    inet_ntop(AF_INET, &addr.sin_addr, srcip, sizeof(sockaddr_in));
+    
     return 0;
 }

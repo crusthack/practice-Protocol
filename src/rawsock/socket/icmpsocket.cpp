@@ -1,3 +1,4 @@
+#include "rawsock/rawsocketcore.hpp"
 #include <rawsock/socket/icmpsocket.hpp>
 #include <rawsock/protocol/inet.hpp>
 #include <rawsock/protocol/icmp.hpp>
@@ -32,7 +33,10 @@ void IcmpSocket::SendPingMessage(const char* dstIp, const short id, const short 
     const int bufferSize = payloadSize + sizeof(InetHeader) + sizeof(IcmpEchoHeader);
     char buffer[bufferSize];
 
-    BuildPingRequestMessage(buffer, bufferSize, "127.0.0.1", dstIp, id, sequenceNum);
+    char _srcIp[16];
+    GetHostIp(_srcIp, dstIp);
+
+    BuildPingRequestMessage(buffer, bufferSize, _srcIp, dstIp, id, sequenceNum);
 
     sockaddr_in addr {};
     addr.sin_family = AF_INET;
@@ -54,6 +58,7 @@ void IcmpSocket::SendPingMessage(const char* dstIp, const short id, const short 
         + static_cast<int64_t>(
             receiveTime.tv_nsec - sendTime.tv_nsec
         );
+        
     if(retcode > 0)
     {
         auto ipHeader = (const InetHeader*)recvBuffer;
@@ -64,7 +69,7 @@ void IcmpSocket::SendPingMessage(const char* dstIp, const short id, const short 
         inet_ntop(AF_INET, &ipHeader->SourceAddress, srcIp, sizeof(srcIp));
         printf("%d bytes from %s: icmp_seq=%d ttl=%d time=%.3f ms\n",
             retcode, srcIp, ntohs(icmpHeader->SequenceNum), ipHeader->TimeToLive,
-            elapsedNs / 1'000.0);
+            elapsedNs / 1'000'000.0);
     }
     return;
 }
@@ -83,7 +88,9 @@ void IcmpSocket::BuildPingRequestMessage(const char* buffer, int len, const char
     char _srcIp[16];
     if(srcIp == nullptr)
     {
-        GetLocalhostIp(_srcIp, 16);
+        sockaddr_in addr {};
+        GetHostIp(&addr, dstIp);
+        inet_ntop(AF_INET, &addr.sin_addr, _srcIp, sizeof(sockaddr_in));
     }
     else
     {
