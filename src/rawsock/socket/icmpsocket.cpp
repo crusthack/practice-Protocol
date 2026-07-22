@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <algorithm>
 #include <time.h>
+#include <unistd.h>
 
 IcmpSocket::IcmpSocket()
 {
@@ -25,6 +26,10 @@ IcmpSocket::IcmpSocket()
     {
         perror("Icmp Socket constructor. set socket opt failed\n");
     }
+}
+IcmpSocket::~IcmpSocket()
+{
+    close(_Socket);
 }
 
 void IcmpSocket::SendPingMessage(const char* dstIp, const short id, const short sequenceNum)

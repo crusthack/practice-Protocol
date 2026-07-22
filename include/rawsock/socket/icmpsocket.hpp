@@ -6,7 +6,7 @@ struct IcmpSocket
 public:
     IcmpSocket();
 
-    ~IcmpSocket() = default;
+    ~IcmpSocket();
 
     IcmpSocket(const IcmpSocket&) = delete;
     IcmpSocket(IcmpSocket&&) = delete;

@@ -138,7 +138,7 @@ Next, add `CMakePresets.json` to select the correct compiler reproducibly:
     {
       "name": "clang-debug",
       "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build/clang",
+      "binaryDir": "${sourceDir}/build",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_CXX_COMPILER": "/usr/bin/clang++-18",
@@ -159,7 +159,7 @@ Finally, add `.clangd` so the editor reads the same compiler options as CMake:
 
 ```yaml
 CompileFlags:
-  CompilationDatabase: build/clang
+  CompilationDatabase: build
 ```
 
 ## Configure and Build
@@ -186,14 +186,14 @@ cmake --build --preset clang-debug
 Run the configure command again after changing CMake configuration or adding
 source files.
 
-Build output and the compilation database are generated in `build/clang`.
+Build output and the compilation database are generated in `build`.
 
 The executables can then be run with:
 
 ```bash
-./build/clang/rawsock_app
-./build/clang/ping
-./build/clang/traceroute
+./build/rawsock_app
+./build/ping
+./build/traceroute
 ```
 
 Programs that create raw sockets normally require elevated network privileges.
@@ -201,7 +201,7 @@ For local development, run the relevant executable with `sudo`, or grant only
 the required capability:
 
 ```bash
-sudo setcap cap_net_raw+ep ./build/clang/ping
+sudo setcap cap_net_raw+ep ./build/ping
 ```
 
 Capabilities must be granted again after the executable is rebuilt.
@@ -287,7 +287,7 @@ code .
 The repository's `.clangd` file points clangd to:
 
 ```text
-build/clang/compile_commands.json
+build/compile_commands.json
 ```
 
 Generate that file with `cmake --preset clang-debug` before opening source files.

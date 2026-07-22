@@ -33,4 +33,6 @@ struct InetHeader
     static void CalcInetHeaderChecksum(const char* buffer, int len);
 
     bool IsValidInetHeader(int totalLen);
+
+    int GetIpHeaderLength();
 };

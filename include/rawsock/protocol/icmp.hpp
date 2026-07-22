@@ -11,9 +11,7 @@ struct IcmpHeader
     Word Checksum;
 
     static void CheckHeaderSize();
-
     static void BuildIcmpHeader(char* buffer, Byte type, Byte code);
-
     static void CalcIcmpHeaderChecksum(char* buffer, int len);
 };
 

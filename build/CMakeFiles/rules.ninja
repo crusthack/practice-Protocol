@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: rawsock
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__rawsock_
+rule CXX_SCAN__rawsock_Debug
   depfile = $DEP_FILE
   command = "/usr/bin/clang-scan-deps-18" -format=p1689 -- /usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -x c++ $in -c -o $OBJ_FILE -MT $DYNDEP_INTERMEDIATE_FILE -MD -MF $DEP_FILE > $DYNDEP_INTERMEDIATE_FILE.tmp && mv $DYNDEP_INTERMEDIATE_FILE.tmp $DYNDEP_INTERMEDIATE_FILE
   description = Scanning $in for CXX dependencies
@@ -23,7 +23,7 @@ rule CXX_SCAN__rawsock_
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__rawsock_
+rule CXX_DYNDEP__rawsock_Debug
   command = /usr/bin/cmake -E cmake_ninja_dyndep --tdi=CMakeFiles/rawsock.dir/CXXDependInfo.json --lang=CXX --modmapfmt=clang --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
@@ -33,7 +33,7 @@ rule CXX_DYNDEP__rawsock_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__rawsock_scanned_
+rule CXX_COMPILER__rawsock_scanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE @$DYNDEP_MODULE_MAP_FILE -o $out -c $in
@@ -43,7 +43,7 @@ rule CXX_COMPILER__rawsock_scanned_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__rawsock_unscanned_
+rule CXX_COMPILER__rawsock_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -53,7 +53,7 @@ rule CXX_COMPILER__rawsock_unscanned_
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__rawsock_
+rule CXX_STATIC_LIBRARY_LINKER__rawsock_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/llvm-ar-18 qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/llvm-ranlib-18 $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -62,7 +62,7 @@ rule CXX_STATIC_LIBRARY_LINKER__rawsock_
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__rawsock_app_
+rule CXX_SCAN__rawsock_app_Debug
   depfile = $DEP_FILE
   command = "/usr/bin/clang-scan-deps-18" -format=p1689 -- /usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -x c++ $in -c -o $OBJ_FILE -MT $DYNDEP_INTERMEDIATE_FILE -MD -MF $DEP_FILE > $DYNDEP_INTERMEDIATE_FILE.tmp && mv $DYNDEP_INTERMEDIATE_FILE.tmp $DYNDEP_INTERMEDIATE_FILE
   description = Scanning $in for CXX dependencies
@@ -71,7 +71,7 @@ rule CXX_SCAN__rawsock_app_
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__rawsock_app_
+rule CXX_DYNDEP__rawsock_app_Debug
   command = /usr/bin/cmake -E cmake_ninja_dyndep --tdi=CMakeFiles/rawsock_app.dir/CXXDependInfo.json --lang=CXX --modmapfmt=clang --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
@@ -81,7 +81,7 @@ rule CXX_DYNDEP__rawsock_app_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__rawsock_app_scanned_
+rule CXX_COMPILER__rawsock_app_scanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE @$DYNDEP_MODULE_MAP_FILE -o $out -c $in
@@ -91,7 +91,7 @@ rule CXX_COMPILER__rawsock_app_scanned_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__rawsock_app_unscanned_
+rule CXX_COMPILER__rawsock_app_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -101,7 +101,7 @@ rule CXX_COMPILER__rawsock_app_unscanned_
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__rawsock_app_
+rule CXX_EXECUTABLE_LINKER__rawsock_app_Debug
   command = $PRE_LINK && /usr/bin/clang++-18 $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -110,7 +110,7 @@ rule CXX_EXECUTABLE_LINKER__rawsock_app_
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__ping_
+rule CXX_SCAN__ping_Debug
   depfile = $DEP_FILE
   command = "/usr/bin/clang-scan-deps-18" -format=p1689 -- /usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -x c++ $in -c -o $OBJ_FILE -MT $DYNDEP_INTERMEDIATE_FILE -MD -MF $DEP_FILE > $DYNDEP_INTERMEDIATE_FILE.tmp && mv $DYNDEP_INTERMEDIATE_FILE.tmp $DYNDEP_INTERMEDIATE_FILE
   description = Scanning $in for CXX dependencies
@@ -119,7 +119,7 @@ rule CXX_SCAN__ping_
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__ping_
+rule CXX_DYNDEP__ping_Debug
   command = /usr/bin/cmake -E cmake_ninja_dyndep --tdi=CMakeFiles/ping.dir/CXXDependInfo.json --lang=CXX --modmapfmt=clang --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
@@ -129,7 +129,7 @@ rule CXX_DYNDEP__ping_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__ping_scanned_
+rule CXX_COMPILER__ping_scanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE @$DYNDEP_MODULE_MAP_FILE -o $out -c $in
@@ -139,7 +139,7 @@ rule CXX_COMPILER__ping_scanned_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__ping_unscanned_
+rule CXX_COMPILER__ping_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -149,7 +149,7 @@ rule CXX_COMPILER__ping_unscanned_
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__ping_
+rule CXX_EXECUTABLE_LINKER__ping_Debug
   command = $PRE_LINK && /usr/bin/clang++-18 $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -158,7 +158,7 @@ rule CXX_EXECUTABLE_LINKER__ping_
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__traceroute_
+rule CXX_SCAN__traceroute_Debug
   depfile = $DEP_FILE
   command = "/usr/bin/clang-scan-deps-18" -format=p1689 -- /usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -x c++ $in -c -o $OBJ_FILE -MT $DYNDEP_INTERMEDIATE_FILE -MD -MF $DEP_FILE > $DYNDEP_INTERMEDIATE_FILE.tmp && mv $DYNDEP_INTERMEDIATE_FILE.tmp $DYNDEP_INTERMEDIATE_FILE
   description = Scanning $in for CXX dependencies
@@ -167,7 +167,7 @@ rule CXX_SCAN__traceroute_
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__traceroute_
+rule CXX_DYNDEP__traceroute_Debug
   command = /usr/bin/cmake -E cmake_ninja_dyndep --tdi=CMakeFiles/traceroute.dir/CXXDependInfo.json --lang=CXX --modmapfmt=clang --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
@@ -177,7 +177,7 @@ rule CXX_DYNDEP__traceroute_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__traceroute_scanned_
+rule CXX_COMPILER__traceroute_scanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE @$DYNDEP_MODULE_MAP_FILE -o $out -c $in
@@ -187,7 +187,7 @@ rule CXX_COMPILER__traceroute_scanned_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__traceroute_unscanned_
+rule CXX_COMPILER__traceroute_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang++-18 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -197,7 +197,7 @@ rule CXX_COMPILER__traceroute_unscanned_
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__traceroute_
+rule CXX_EXECUTABLE_LINKER__traceroute_Debug
   command = $PRE_LINK && /usr/bin/clang++-18 $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -215,7 +215,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/hack/Desktop/practice-Network -B/home/hack/Desktop/practice-Network/build
+  command = /usr/bin/cmake --regenerate-during-build -S/home/hack/Desktop/protocol -B/home/hack/Desktop/protocol/build
   description = Re-running CMake...
   generator = 1
 

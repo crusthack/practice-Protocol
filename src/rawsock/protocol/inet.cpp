@@ -55,3 +55,8 @@ bool InetHeader::IsValidInetHeader(int totalLen)
     
     return isValid;
 }; 
+
+int InetHeader::GetIpHeaderLength()
+{
+    return (VersionAndHeaderLength & 0x0f) * 4;
+}
