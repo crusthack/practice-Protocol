@@ -52,17 +52,20 @@ void UdpSocket::SendTo(const char* dstIp, const Word portNum, const Byte* buffer
     addr.sin_port = htons(portNum);
     inet_pton(AF_INET, dstIp, &addr.sin_addr);
 
-    for(int i=0; i<totalLen; ++i)
-    {
-        printf("0x%02x ", buf[i]);
-    }
-    printf("\n");
-
     sendto(_Socket, buf, totalLen, 0, (sockaddr*)&addr, sizeof(addr));
 
     delete[] buf;
 }
 void UdpSocket::RecvFrom(Byte* const buffer, const int len, char* const srcIp, const Word& portNum)
 {
-    
+    char buf[1024];
+    sockaddr_in addr;
+    socklen_t l = sizeof(addr);
+    auto r = recvfrom(_Socket, buf, 1024, 0, (sockaddr*)&addr, &l);
+
+    for(int i=0; i<r; ++i)
+    {
+        printf("0x%02x ", (unsigned char)buf[i]);
+    }
+    printf("\n");
 }

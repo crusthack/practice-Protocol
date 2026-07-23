@@ -1,4 +1,3 @@
-#include <iostream>
 #include <rawsock/socket/icmpsocket.hpp>
 
 int main()

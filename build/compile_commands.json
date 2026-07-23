@@ -64,5 +64,11 @@
   "command": "/usr/bin/clang++-18 -I/home/hack/Desktop/protocol/include -g -std=c++26 -stdlib=libc++ -o CMakeFiles/traceroute.dir/examples/traceroute.cpp.o -c /home/hack/Desktop/protocol/examples/traceroute.cpp",
   "file": "/home/hack/Desktop/protocol/examples/traceroute.cpp",
   "output": "CMakeFiles/traceroute.dir/examples/traceroute.cpp.o"
+},
+{
+  "directory": "/home/hack/Desktop/protocol/build",
+  "command": "/usr/bin/clang++-18 -I/home/hack/Desktop/protocol/include -g -std=c++26 -stdlib=libc++ -o CMakeFiles/udpsender.dir/examples/udpsender.cpp.o -c /home/hack/Desktop/protocol/examples/udpsender.cpp",
+  "file": "/home/hack/Desktop/protocol/examples/udpsender.cpp",
+  "output": "CMakeFiles/udpsender.dir/examples/udpsender.cpp.o"
 }
 ]

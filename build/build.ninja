@@ -55,8 +55,6 @@ build CMakeFiles/rawsock.dir/src/rawsock/protocol/inet.cpp.o: CXX_COMPILER__raws
   INCLUDES = -I/home/hack/Desktop/protocol/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
-  TARGET_COMPILE_PDB = CMakeFiles/rawsock.dir/rawsock.pdb
-  TARGET_PDB = librawsock.pdb
 
 build CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o: CXX_COMPILER__rawsock_unscanned_Debug /home/hack/Desktop/protocol/src/rawsock/protocol/icmp.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o.d
@@ -64,8 +62,6 @@ build CMakeFiles/rawsock.dir/src/rawsock/protocol/icmp.cpp.o: CXX_COMPILER__raws
   INCLUDES = -I/home/hack/Desktop/protocol/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
-  TARGET_COMPILE_PDB = CMakeFiles/rawsock.dir/rawsock.pdb
-  TARGET_PDB = librawsock.pdb
 
 build CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o: CXX_COMPILER__rawsock_unscanned_Debug /home/hack/Desktop/protocol/src/rawsock/protocol/udp.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o.d
@@ -73,8 +69,6 @@ build CMakeFiles/rawsock.dir/src/rawsock/protocol/udp.cpp.o: CXX_COMPILER__rawso
   INCLUDES = -I/home/hack/Desktop/protocol/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
-  TARGET_COMPILE_PDB = CMakeFiles/rawsock.dir/rawsock.pdb
-  TARGET_PDB = librawsock.pdb
 
 build CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o: CXX_COMPILER__rawsock_unscanned_Debug /home/hack/Desktop/protocol/src/rawsock/protocol/tcp.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o.d
@@ -82,8 +76,6 @@ build CMakeFiles/rawsock.dir/src/rawsock/protocol/tcp.cpp.o: CXX_COMPILER__rawso
   INCLUDES = -I/home/hack/Desktop/protocol/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/protocol
-  TARGET_COMPILE_PDB = CMakeFiles/rawsock.dir/rawsock.pdb
-  TARGET_PDB = librawsock.pdb
 
 build CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o: CXX_COMPILER__rawsock_unscanned_Debug /home/hack/Desktop/protocol/src/rawsock/rawsocketcore.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o.d
@@ -91,8 +83,6 @@ build CMakeFiles/rawsock.dir/src/rawsock/rawsocketcore.cpp.o: CXX_COMPILER__raws
   INCLUDES = -I/home/hack/Desktop/protocol/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock
-  TARGET_COMPILE_PDB = CMakeFiles/rawsock.dir/rawsock.pdb
-  TARGET_PDB = librawsock.pdb
 
 build CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o: CXX_COMPILER__rawsock_unscanned_Debug /home/hack/Desktop/protocol/src/rawsock/socket/icmpsocket.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o.d
@@ -100,8 +90,6 @@ build CMakeFiles/rawsock.dir/src/rawsock/socket/icmpsocket.cpp.o: CXX_COMPILER__
   INCLUDES = -I/home/hack/Desktop/protocol/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/socket
-  TARGET_COMPILE_PDB = CMakeFiles/rawsock.dir/rawsock.pdb
-  TARGET_PDB = librawsock.pdb
 
 build CMakeFiles/rawsock.dir/src/rawsock/socket/udpsocket.cpp.o: CXX_COMPILER__rawsock_unscanned_Debug /home/hack/Desktop/protocol/src/rawsock/socket/udpsocket.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/socket/udpsocket.cpp.o.d
@@ -109,8 +97,6 @@ build CMakeFiles/rawsock.dir/src/rawsock/socket/udpsocket.cpp.o: CXX_COMPILER__r
   INCLUDES = -I/home/hack/Desktop/protocol/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/socket
-  TARGET_COMPILE_PDB = CMakeFiles/rawsock.dir/rawsock.pdb
-  TARGET_PDB = librawsock.pdb
 
 build CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o: CXX_COMPILER__rawsock_unscanned_Debug /home/hack/Desktop/protocol/src/rawsock/socket/tcpsocket.cpp || cmake_object_order_depends_target_rawsock
   DEP_FILE = CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o.d
@@ -118,8 +104,6 @@ build CMakeFiles/rawsock.dir/src/rawsock/socket/tcpsocket.cpp.o: CXX_COMPILER__r
   INCLUDES = -I/home/hack/Desktop/protocol/include
   OBJECT_DIR = CMakeFiles/rawsock.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock.dir/src/rawsock/socket
-  TARGET_COMPILE_PDB = CMakeFiles/rawsock.dir/rawsock.pdb
-  TARGET_PDB = librawsock.pdb
 
 
 # =============================================================================
@@ -134,9 +118,8 @@ build librawsock.a: CXX_STATIC_LIBRARY_LINKER__rawsock_Debug CMakeFiles/rawsock.
   OBJECT_DIR = CMakeFiles/rawsock.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/rawsock.dir/rawsock.pdb
   TARGET_FILE = librawsock.a
-  TARGET_PDB = librawsock.pdb
+  TARGET_PDB = rawsock.a.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target rawsock_app
@@ -153,8 +136,6 @@ build CMakeFiles/rawsock_app.dir/app/main.cpp.o: CXX_COMPILER__rawsock_app_unsca
   INCLUDES = -I/home/hack/Desktop/protocol/include
   OBJECT_DIR = CMakeFiles/rawsock_app.dir
   OBJECT_FILE_DIR = CMakeFiles/rawsock_app.dir/app
-  TARGET_COMPILE_PDB = CMakeFiles/rawsock_app.dir/
-  TARGET_PDB = rawsock_app.pdb
 
 
 # =============================================================================
@@ -171,9 +152,8 @@ build rawsock_app: CXX_EXECUTABLE_LINKER__rawsock_app_Debug CMakeFiles/rawsock_a
   OBJECT_DIR = CMakeFiles/rawsock_app.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/rawsock_app.dir/
   TARGET_FILE = rawsock_app
-  TARGET_PDB = rawsock_app.pdb
+  TARGET_PDB = rawsock_app.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target ping
@@ -190,8 +170,6 @@ build CMakeFiles/ping.dir/examples/ping.cpp.o: CXX_COMPILER__ping_unscanned_Debu
   INCLUDES = -I/home/hack/Desktop/protocol/include
   OBJECT_DIR = CMakeFiles/ping.dir
   OBJECT_FILE_DIR = CMakeFiles/ping.dir/examples
-  TARGET_COMPILE_PDB = CMakeFiles/ping.dir/
-  TARGET_PDB = ping.pdb
 
 
 # =============================================================================
@@ -208,9 +186,8 @@ build ping: CXX_EXECUTABLE_LINKER__ping_Debug CMakeFiles/ping.dir/examples/ping.
   OBJECT_DIR = CMakeFiles/ping.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/ping.dir/
   TARGET_FILE = ping
-  TARGET_PDB = ping.pdb
+  TARGET_PDB = ping.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target traceroute
@@ -227,8 +204,6 @@ build CMakeFiles/traceroute.dir/examples/traceroute.cpp.o: CXX_COMPILER__tracero
   INCLUDES = -I/home/hack/Desktop/protocol/include
   OBJECT_DIR = CMakeFiles/traceroute.dir
   OBJECT_FILE_DIR = CMakeFiles/traceroute.dir/examples
-  TARGET_COMPILE_PDB = CMakeFiles/traceroute.dir/
-  TARGET_PDB = traceroute.pdb
 
 
 # =============================================================================
@@ -245,9 +220,42 @@ build traceroute: CXX_EXECUTABLE_LINKER__traceroute_Debug CMakeFiles/traceroute.
   OBJECT_DIR = CMakeFiles/traceroute.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/traceroute.dir/
   TARGET_FILE = traceroute
-  TARGET_PDB = traceroute.pdb
+  TARGET_PDB = traceroute.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target udpsender
+
+
+#############################################
+# Order-only phony target for udpsender
+
+build cmake_object_order_depends_target_udpsender: phony || cmake_object_order_depends_target_rawsock
+
+build CMakeFiles/udpsender.dir/examples/udpsender.cpp.o: CXX_COMPILER__udpsender_unscanned_Debug /home/hack/Desktop/protocol/examples/udpsender.cpp || cmake_object_order_depends_target_udpsender
+  DEP_FILE = CMakeFiles/udpsender.dir/examples/udpsender.cpp.o.d
+  FLAGS = -g -std=c++26 -stdlib=libc++
+  INCLUDES = -I/home/hack/Desktop/protocol/include
+  OBJECT_DIR = CMakeFiles/udpsender.dir
+  OBJECT_FILE_DIR = CMakeFiles/udpsender.dir/examples
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target udpsender
+
+
+#############################################
+# Link the executable udpsender
+
+build udpsender: CXX_EXECUTABLE_LINKER__udpsender_Debug CMakeFiles/udpsender.dir/examples/udpsender.cpp.o | librawsock.a || librawsock.a
+  FLAGS = -g
+  LINK_FLAGS = -stdlib=libc++
+  LINK_LIBRARIES = librawsock.a
+  OBJECT_DIR = CMakeFiles/udpsender.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = udpsender
+  TARGET_PDB = udpsender.dbg
 
 
 #############################################
@@ -285,7 +293,7 @@ build rawsock: phony librawsock.a
 #############################################
 # Folder: /home/hack/Desktop/protocol/build
 
-build all: phony librawsock.a rawsock_app ping traceroute
+build all: phony librawsock.a rawsock_app ping traceroute udpsender
 
 # =============================================================================
 # Built-in targets
@@ -294,14 +302,14 @@ build all: phony librawsock.a rawsock_app ping traceroute
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/hack/Desktop/protocol/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.28/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-FindBinUtils.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/hack/Desktop/protocol/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/hack/Desktop/protocol/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.28/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-FindBinUtils.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
+build /home/hack/Desktop/protocol/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
 
 
 #############################################

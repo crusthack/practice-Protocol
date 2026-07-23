@@ -64,3 +64,12 @@ target_link_libraries(traceroute
     PRIVATE
         rawsock
 )
+
+add_executable(udpsender
+    examples/udpsender.cpp
+)
+
+target_link_libraries(udpsender
+    PRIVATE
+        rawsock
+)
