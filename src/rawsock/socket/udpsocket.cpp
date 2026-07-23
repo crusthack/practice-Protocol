@@ -1,10 +1,12 @@
 #include <arpa/inet.h>
 #include <cstdio>
+#include <iostream>
 #include <netinet/in.h>
 #include "rawsock/rawsocketcore.hpp"
 #include "rawsock/socket/udpsocket.hpp"
 #include "rawsock/protocol/udp.hpp"
 #include "rawsock/protocol/inet.hpp"
+#include <ostream>
 #include <sys/socket.h>
 #include <unistd.h>
 
@@ -56,16 +58,25 @@ void UdpSocket::SendTo(const char* dstIp, const Word portNum, const Byte* buffer
 
     delete[] buf;
 }
-void UdpSocket::RecvFrom(Byte* const buffer, const int len, char* const srcIp, const Word& portNum)
+int UdpSocket::RecvFrom(Byte* const buffer, const int len, char* const srcIp, Word& portNum)
 {
-    char buf[1024];
+    char buf[1024] {};
     sockaddr_in addr;
     socklen_t l = sizeof(addr);
     auto r = recvfrom(_Socket, buf, 1024, 0, (sockaddr*)&addr, &l);
-
-    for(int i=0; i<r; ++i)
+    if(len < r || r == -1)
     {
-        printf("0x%02x ", (unsigned char)buf[i]);
+        return -1;
     }
-    printf("\n");
+
+    auto ipheader = (InetHeader*)buf;
+    auto udpHeader = (UdpHeader*)((char*)buf + ipheader->GetIpHeaderLength());
+    auto payload = (Byte*)((char*)udpHeader + sizeof(UdpHeader));
+    auto payloadLen = ntohs(udpHeader->Length) - sizeof(UdpHeader);
+    std::copy(payload, payload + payloadLen, buffer);
+
+    portNum = udpHeader->SrcPort;
+    inet_ntop(AF_INET, &ipheader->SourceAddress, srcIp, INET_ADDRSTRLEN);
+
+    return payloadLen;
 }

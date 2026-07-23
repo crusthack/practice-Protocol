@@ -17,7 +17,13 @@ int main()
     unsigned char buffer[1024];
     char from[INET_ADDRSTRLEN];
     unsigned short portnum {};
-    sock.RecvFrom(buffer, 1024, from, portnum);
-    
+    auto r = sock.RecvFrom(buffer, 1024, from, portnum);
+    printf("From %s:%d:\t", from, portnum);
+    for(int i=0; i<r; ++i)
+    {
+        printf("%c", buffer[i]);
+    }
+    printf("\n");
+
     return 0;
 }

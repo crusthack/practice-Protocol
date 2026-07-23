@@ -12,6 +12,6 @@ int main()
     std::string mes{};
     std::cin >> mes;
     sock.SendTo("13.238.15.82", 5000, (const unsigned char*)mes.c_str(), mes.length());
-
+    
     return 0;
 }

@@ -16,7 +16,7 @@ public:
 
 
     void SendTo(const char* dstIp, const Word portNum, const Byte* buffer, const int len);
-    void RecvFrom(Byte* const buffer, const int len, char* const srcIp, const Word& portNum);
+    int RecvFrom(Byte* const buffer, const int len, char* const srcIp, Word& portNum);
 
 private:
     int _Socket {-1};
